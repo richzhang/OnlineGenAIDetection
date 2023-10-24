@@ -119,9 +119,9 @@
 <html>
 <head>
 	<title>This is my paper title</title>
-	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
-	<meta property="og:title" content="Creative and Descriptive Paper Title." />
-	<meta property="og:description" content="Paper description." />
+	<meta property="og:image" content="resources/teaser.jpg"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:title" content="Online Detection of AI-Generated Images" />
+	<meta property="og:description" content="We study generalization of GenAI detectors in an online setting. ICCV DFAD Workshop 2023." />
 
 	<!-- Get from Google Analytics -->
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -138,23 +138,28 @@
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">Creative and Descriptive Paper Title</span>
-		<table align=center width=600px>
-			<table align=center width=600px>
+		<span style="font-size:36px">Online Detection of AI-Generated Images</span>
+		<table align=center width=800px>
+			<table align=center width=800px>
 				<tr>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">First Author</a></span>
+							<span style="font-size:24px">David C. Epstein</span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Second Author</a></span>
+							<span style="font-size:24px">Ishan Jain</span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Third Author</a></span>
+							<span style="font-size:24px"><a href="https://www.oliverwang.info/">Oliver Wang</a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px"><a href="https://richzhang.github.io/">Richard Zhang</a></span>
 						</center>
 					</td>
 				</tr>
@@ -163,12 +168,12 @@
 				<tr>
 					<td align=center width=120px>
 						<center>
-							<span style="font-size:24px"><a href=''>[Paper]</a></span>
+							<span style="font-size:24px"><a href='https://arxiv.org/abs/2310.15150'>[Paper]</a></span>
 						</center>
 					</td>
 					<td align=center width=120px>
 						<center>
-							<span style="font-size:24px"><a href='https://github.com/richzhang/webpage-template'>[GitHub]</a></span><br>
+							<span style="font-size:24px"><a href='https://www.dropbox.com/scl/fi/31zlp098mmjydde42eu2f/iccv_presentation_genai_detection_FINAL.pptx?rlkey=bt7ibittpv5h6d7n208s1n6bu&dl=0'>[Slides]</a></span><br>
 						</center>
 					</td>
 				</tr>
@@ -177,19 +182,12 @@
 	</center>
 
 	<center>
-		<table align=center width=850px>
+		<table align=center width=976px>
 			<tr>
 				<td width=260px>
-					<center>
-						<img class="round" style="width:500px" src="./resources/teaser.png"/>
-					</center>
-				</td>
-			</tr>
-		</table>
-		<table align=center width=850px>
-			<tr>
-				<td>
-					This was a template originally made for <a href="http://richzhang.github.io/colorization/">Colorful Image Colorization</a>. The code can be found in this <a href="https://github.com/richzhang/webpage-template">repository</a>.
+                    <video id="teaser_video" width="976px" loop src="./resources/teaser_v1.mp4" autoplay muted controls>
+                        Your browser does not support HTML5 Player 
+                    </video>
 				</td>
 			</tr>
 		</table>
@@ -197,34 +195,18 @@
 
 	<hr>
 
-	<table align=center width=850px>
+	<table align=center width=976px>
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				This is my abstract.
+				With advancements in AI-generated images coming on a continuous basis, it is increasingly difficult to distinguish traditionally-sourced images (e.g., photos, artwork) from AI-generated ones. Previous detection methods study the generalization from a single generator to another in isolation. However, in reality, new generators are released on a streaming basis. We study generalization in this setting, training on N models and testing on the next (N+k), following the historical release dates of well-known generation methods. Furthermore, images increasingly consist of both real and generated components, for example through image inpainting. Thus, we extend this approach to pixel prediction, demonstrating strong performance using automatically-generated inpainted data. In addition, for settings where commercial models are not publicly available for automatic data generation, we evaluate if pixel detectors can be trained solely on whole synthetic images.
 			</td>
 		</tr>
 	</table>
 	<br>
 
 	<hr>
-	<center><h1>Talk</h1></center>
-	<p align="center">
-		<iframe width="660" height="395" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>
-	</p>
-
-	<table align=center width=800px>
-		<br>
-		<tr>
-			<center>
-				<span style="font-size:28px"><a href=''>[Slides]</a>
-				</span>
-			</center>
-		</tr>
-	</table>
-	<hr>
-
-	<center><h1>Code</h1></center>
+	<center><h1>Online Detection Results</h1></center>
 
 	<table align=center width=420px>
 		<center>
@@ -234,41 +216,59 @@
 			</tr>
 		</center>
 	</table>
+
 	<table align=center width=400px>
 		<tr>
 			<td align=center width=400px>
 				<center>
-					<td><img class="round" style="width:450px" src="./resources/method_diagram.png"/></td>
+					<td><img class="round" style="width:976px" src="./resources/result.jpg"/></td>
 				</center>
 			</td>
 		</tr>
 	</table>
-	<table align=center width=850px>
+	<table align=center width=976px>
 		<center>
 			<tr>
 				<td>
-					Short description if wanted
+					Accuracy measures if a classifier is able to identify fakes. AuC measures if it has the right features to do so. Generators are added into the classifier one at a time (x-axis), while accuracy/auc are measured across test sets (y-axis). Values below the green boxes are already trained on (and achieve near 100%). Values above the green boxes indicate <i>generalization</i>.
+					<br><br>
+					While the specifics of many methods are unknown, this study indicates that certain methods may have underlying similarities. For example, LDM generalizes well to Midjourney (v2-v3), Stable Diffusion (v1).
 				</td>
 			</tr>
 		</center>
 	</table>
-	<table align=center width=800px>
-		<br>
-		<tr><center>
-			<span style="font-size:28px">&nbsp;<a href='https://github.com/richzhang/webpage-template'>[GitHub]</a>
-			</center>
-		</span>
+
+	<hr>
+	<center><h1>Detecting Inpainting</h1></center>
+
+	<table align=center width=400px>
+		<tr>
+			<td align=center width=400px>
+				<center>
+					<td><img class="round" style="width:976px" src="./resources/inpaint.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<table align=center width=976px>
+		<center>
+			<tr>
+				<td>
+					Additionally, we show that GenAI methods contain enough local cues to train a per-pixel detector for inpainting applications.
+				</td>
+			</tr>
+		</center>
 	</table>
 	<br>
 	<hr>
-	<table align=center width=450px>
-		<center><h1>Paper and Supplementary Material</h1></center>
+	<table align=center width=576px>
+		<center><h1>Paper</h1></center>
 		<tr>
-			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
-			<td><span style="font-size:14pt">F. Author, S. Author, T. Author.<br>
-				<b>Creative and Descriptive Paper Title.</b><br>
-				In Conference, 20XX.<br>
-				(hosted on <a href="">ArXiv</a>)<br>
+			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/page1.png"/></a></td>
+			<td><span style="font-size:14pt">D. C. Epstein, I. Jain, O. Wang, R. Zhang.<br>
+				<b>Online Detection of AI-Generated Images.</b><br>
+				In ICCV DFAD Workshop, 2023.<br>
+				(hosted on <a href="https://arxiv.org/abs/2310.15150">ArXiv</a>)<br>
 				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
 				<span style="font-size:4pt"><a href=""><br></a>
 				</span>
@@ -293,7 +293,7 @@
 			<td width=400px>
 				<left>
 					<center><h1>Acknowledgements</h1></center>
-					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
+					We thank Sheng-Yu Wang and Alexei A. Efros for helpful discussion, Charlie Scheinost and Josh Arteaga for their support and discussion, and Deepti Clark for help gathering inpainting data.
 				</left>
 			</td>
 		</tr>

@@ -1,6 +1,6 @@
-@inproceedings{author20XXtitle,
-  title={Please cite me},
-  author={Author, First and Author, Second and Author, Third},
-  booktitle={Conference},
-  year={20XX}
+@inproceedings{epstein2023online,
+  title={Online Detection of AI-Generated Images},
+  author={Epstein, David C. and Jain, Ishan and Wang, Oliver and Zhang, Richard},
+  booktitle={ICCV DeepFake Analysis and Detection Workshop},
+  year={2023}
 }
